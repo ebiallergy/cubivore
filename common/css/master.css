@@ -499,26 +499,36 @@ header:after {
 }
 
 .logo {
-  float: none;
+  float: left;
   text-align: center;
 }
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1280px) {
   .logo {
-    float: left;
+    margin-right: -131px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 790px) {
+  .logo {
+    float: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .logo {
+    float: none;
   }
 }
 
 .g-nav {
-  overflow: visible;
+  overflow: hidden;
   margin: 23px auto 13px;
   max-width: 980px;
+  text-align: center;
   letter-spacing: -5px;
 }
 .g-nav li {
   display: inline-block;
-  width: 33%;
+  margin-left: 14%;
   letter-spacing: 0;
-  text-align: center;
 }
 .g-nav li a {
   opacity: 0.5;
@@ -527,27 +537,68 @@ header:after {
   opacity: 100;
 }
 .g-nav > :first-child {
-  width: 23%;
-  margin-left: 6%;
+  margin-left: 0;
 }
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 481px) and (max-width: 790px) {
   .g-nav {
-    overflow: hidden;
+    overflow: visible;
+    margin-top: 13px;
   }
-  .g-nav > :first-child {
-    margin-left: 3%;
+  .g-nav li {
+    margin-left: 18%;
+  }
+  .g-nav .g-moku img {
+    min-width: 121px;
+  }
+  .g-nav .g-howto {
+    width: 9.8%;
+  }
+  .g-nav .g-howto img {
+    min-width: 96px;
+  }
+  .g-nav .g-world img {
+    min-width: 160px;
   }
 }
 @media only screen and (max-width: 480px) {
+  .g-nav {
+    display: none;
+    overflow: visible;
+    margin-top: 13px;
+  }
   .g-nav li {
     display: block;
-    width: auto;
-    margin-bottom: 14px;
-  }
-  .g-nav > :first-child {
-    width: auto;
     margin-left: 0;
+    margin-bottom: 14px;
+    width: auto;
   }
+  .g-nav .g-moku img {
+    width: 151px;
+  }
+  .g-nav .g-howto img {
+    width: 126px;
+  }
+  .g-nav .g-world img {
+    width: 266px;
+  }
+}
+
+.g-moku {
+  width: 15.4%;
+}
+.g-moku img {
+  min-width: 151px;
+}
+
+.g-howto {
+  width: 12.8%;
+}
+.g-howto img {
+  min-width: 126px;
+}
+
+.g-world {
+  width: 27.1%;
 }
 
 /*-------------------------------------
@@ -619,6 +670,11 @@ footer dt {
 }
 footer dd {
   margin: -1.8em 0 0 7em;
+}
+
+.footer-body {
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 /*-------------------------------------
@@ -779,7 +835,7 @@ animates
 /*-------------------------------------
 looks
 -------------------------------------*/
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 790px) {
   .jsOn .imageSwich {
     padding: 40px 0;
   }
@@ -865,6 +921,10 @@ Common
 .fs-12 {
   font-size: 12px;
   font-size: 1.2rem;
+}
+
+.align-c {
+  text-align: center;
 }
 
 /*-------------------------------------

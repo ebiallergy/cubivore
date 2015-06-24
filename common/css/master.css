@@ -409,14 +409,6 @@ th {
   clear: both;
 }
 
-.aniBox, .aniBox2 {
-  border: 2px solid #ccc;
-  border-radius: 6px;
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-}
-
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -622,6 +614,13 @@ contents
   display: table-cell;
 }
 
+.mainObject {
+  position: relative;
+  width: 513px;
+  z-index: 1;
+  height: 429px;
+}
+
 .subObject {
   position: relative;
   top: 50px;
@@ -823,98 +822,255 @@ Texts
 /*-------------------------------------
 animates
 -------------------------------------*/
-.aniBox {
-  margin-bottom: 20px;
-}
-
-.aniBox2 {
-  position: relative;
-  margin-bottom: 150px;
-}
-
-/*-------------------------------------
-looks
--------------------------------------*/
-@media only screen and (min-width: 481px) and (max-width: 790px) {
-  .jsOn .imageSwich {
-    padding: 40px 0;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .jsOn .imageSwich {
-    padding: 40px 0;
-  }
-}
-.jsOn .imageSwich {
-  position: relative;
-  padding: 90px 0;
-  width: 100%;
-  height: 100%;
-  background: #262626;
-}
-.jsOn .hdg-look {
-  margin: 0;
-  padding-bottom: 40px;
-  text-align: center;
-}
-.jsOn .look {
-  position: relative;
-  margin: 0 auto;
-  max-width: 485px;
-}
-.jsOn .look li {
+.mainObject-01, .mainObject-02, .mainObject-03, .mainObject-04, .mainObject-05 {
   position: absolute;
-  padding: 0 40px;
-}
-.jsOn .look li a {
-  display: block;
-  -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.59);
-  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.59);
-}
-.jsOn .look .activeL {
-  z-index: 1;
-}
-.jsOn .look .rotate_1 {
-  -webkit-transform: rotate(1deg);
-  transform: rotate(1deg);
-}
-.jsOn .look .rotate_2 {
-  -webkit-transform: rotate(2deg);
-  transform: rotate(2deg);
-}
-.jsOn .look .rotate_3 {
-  -webkit-transform: rotate(3deg);
-  transform: rotate(3deg);
-}
-.jsOn .look .rotate_4 {
-  -webkit-transform: rotate(4deg);
-  transform: rotate(4deg);
-}
-.jsOn .look .rotate_5 {
-  -webkit-transform: rotate(5deg);
-  transform: rotate(5deg);
-}
-.jsOn .look .rotate_-1 {
-  -webkit-transform: rotate(-1deg);
-  transform: rotate(-1deg);
-}
-.jsOn .look .rotate_-2 {
-  -webkit-transform: rotate(-2deg);
-  transform: rotate(-2deg);
-}
-.jsOn .look .rotate_-3 {
-  -webkit-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-}
-.jsOn .look .rotate_-4 {
-  -webkit-transform: rotate(-4deg);
-  transform: rotate(-4deg);
-}
-.jsOn .look .rotate_-5 {
-  -webkit-transform: rotate(-5deg);
-  transform: rotate(-5deg);
+  top: 0;
+  left: 0;
 }
 
+.mainObject-01 {
+  z-index: 5;
+  top: 69px;
+  left: 88px;
+}
+
+.mainObject-02 {
+  z-index: 4;
+  left: 218px;
+}
+
+.mainObject-03 {
+  z-index: 6;
+  top: 115px;
+  left: 246px;
+}
+
+.mainObject-04 {
+  z-index: 3;
+  top: 204px;
+  left: 226px;
+}
+
+.mainObject-05 {
+  z-index: 2;
+  top: 207px;
+}
+
+.mainObject-01 {
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+  -webkit-animation-name: mbj-1;
+  -moz-animation-name: mbj-1;
+  animation-name: mbj-1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-webkit-keyframes mbj-1 {
+  0% {
+    transform: translateY(0) translateX(0) rotate();
+  }
+  100% {
+    transform: translateY(1%) translateX(3%) rotate(1deg);
+  }
+}
+@-moz-keyframes mbj-1 {
+  0% {
+    transform: translateY(0) translateX(0) rotate();
+  }
+  100% {
+    transform: translateY(1%) translateX(3%) rotate(1deg);
+  }
+}
+@keyframes mbj-1 {
+  0% {
+    transform: translateY(0) translateX(0) rotate();
+  }
+  100% {
+    transform: translateY(1%) translateX(3%) rotate(1deg);
+  }
+}
+.mainObject-02 {
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-name: mbj-2;
+  -moz-animation-name: mbj-2;
+  animation-name: mbj-2;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-webkit-keyframes mbj-2 {
+  0% {
+    transform: translateY(0) translateX(0) rotate();
+  }
+  100% {
+    transform: translateY(3%) translateX(3%) rotate(2deg);
+  }
+}
+@-moz-keyframes mbj-2 {
+  0% {
+    transform: translateY(0) translateX(0) rotate();
+  }
+  100% {
+    transform: translateY(3%) translateX(3%) rotate(2deg);
+  }
+}
+@keyframes mbj-2 {
+  0% {
+    transform: translateY(0) translateX(0) rotate();
+  }
+  100% {
+    transform: translateY(3%) translateX(3%) rotate(2deg);
+  }
+}
+.mainObject-03 {
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-name: mbj-3;
+  -moz-animation-name: mbj-3;
+  animation-name: mbj-3;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-webkit-keyframes mbj-3 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+@-moz-keyframes mbj-3 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+@keyframes mbj-3 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+.mainObject-04 {
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-name: obj-4;
+  -moz-animation-name: obj-4;
+  animation-name: obj-4;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-webkit-keyframes obj-4 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  40% {
+    transform: translateY(-3%) rotate(0);
+  }
+  80% {
+    transform: translateY(-8%) rotate(-2deg);
+  }
+  90% {
+    transform: translateY(-3%) rotate(0);
+  }
+  100% {
+    transform: translateY(-12%) rotate(-4deg);
+  }
+}
+@-moz-keyframes obj-4 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  40% {
+    transform: translateY(-3%) rotate(0);
+  }
+  80% {
+    transform: translateY(-8%) rotate(-2deg);
+  }
+  90% {
+    transform: translateY(-3%) rotate(0);
+  }
+  100% {
+    transform: translateY(-12%) rotate(-4deg);
+  }
+}
+@keyframes obj-4 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  40% {
+    transform: translateY(-3%) rotate(0);
+  }
+  80% {
+    transform: translateY(-8%) rotate(-2deg);
+  }
+  90% {
+    transform: translateY(-3%) rotate(0);
+  }
+  100% {
+    transform: translateY(-12%) rotate(-4deg);
+  }
+}
 /*-------------------------------------
 Common
 -------------------------------------*/
@@ -925,98 +1081,6 @@ Common
 
 .align-c {
   text-align: center;
-}
-
-/*-------------------------------------
-changeColor
--------------------------------------*/
-.ptn1 {
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-iteration-count: 1;
-  -moz-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation-name: changeColor;
-  -moz-animation-name: changeColor;
-  animation-name: changeColor;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-@-webkit-keyframes changeColor {
-  0% {
-    background: #fff;
-  }
-  100% {
-    background: #FEFF3D;
-  }
-}
-@-moz-keyframes changeColor {
-  0% {
-    background: #fff;
-  }
-  100% {
-    background: #FEFF3D;
-  }
-}
-@keyframes changeColor {
-  0% {
-    background: #fff;
-  }
-  100% {
-    background: #FEFF3D;
-  }
-}
-.default {
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-iteration-count: 1;
-  -moz-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation-name: changeColor2;
-  -moz-animation-name: changeColor2;
-  animation-name: changeColor2;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-@-webkit-keyframes changeColor2 {
-  0% {
-    background: #FEFF3D;
-  }
-  100% {
-    background: #fff;
-  }
-}
-@-moz-keyframes changeColor2 {
-  0% {
-    background: #FEFF3D;
-  }
-  100% {
-    background: #fff;
-  }
-}
-@keyframes changeColor2 {
-  0% {
-    background: #FEFF3D;
-  }
-  100% {
-    background: #fff;
-  }
 }
 
 /*# sourceMappingURL=master.css.map */

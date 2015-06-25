@@ -613,14 +613,6 @@ contents
 .mainObject {
   overflow: hidden;
 }
-.mainObject ul {
-  position: relative;
-  width: 513px;
-  height: 429px;
-}
-.mainObject ul li {
-  position: absolute;
-}
 @media only screen and (min-width: 481px) and (max-width: 790px) {
   .mainObject ul {
     left: -7%;
@@ -634,11 +626,19 @@ contents
     width: 70%;
   }
 }
+.mainObject ul {
+  position: relative;
+  width: 513px;
+  height: 429px;
+}
+.mainObject ul li {
+  position: absolute;
+}
 
 .mainObject-pts-01 {
-  z-index: 5;
   top: 69px;
   left: 88px;
+  z-index: 5;
 }
 @media only screen and (max-width: 480px) {
   .mainObject-pts-01 {
@@ -648,9 +648,9 @@ contents
 }
 
 .mainObject-pts-02 {
-  z-index: 4;
-  left: 218px;
   top: 0;
+  left: 218px;
+  z-index: 4;
 }
 @media only screen and (max-width: 480px) {
   .mainObject-pts-02 {
@@ -659,21 +659,21 @@ contents
 }
 
 .mainObject-pts-03 {
-  z-index: 6;
   top: 115px;
   left: 246px;
+  z-index: 6;
 }
 @media only screen and (max-width: 480px) {
   .mainObject-pts-03 {
-    top: 80.5px;
-    left: 172.2px;
+    top: 77.5px;
+    left: 173.3px;
   }
 }
 
 .mainObject-pts-04 {
-  z-index: 3;
   top: 204px;
   left: 226px;
+  z-index: 3;
 }
 @media only screen and (max-width: 480px) {
   .mainObject-pts-04 {
@@ -683,9 +683,9 @@ contents
 }
 
 .mainObject-pts-05 {
-  z-index: 2;
   top: 207px;
   left: 0;
+  z-index: 2;
 }
 @media only screen and (max-width: 480px) {
   .mainObject-pts-05 {
@@ -694,8 +694,8 @@ contents
 }
 
 .subObject {
-  text-align: right;
   margin: -10% 10% 0 0;
+  text-align: right;
 }
 @media only screen and (min-width: 481px) and (max-width: 790px) {
   .subObject {
@@ -906,13 +906,85 @@ Texts
 /*-------------------------------------
 animates
 -------------------------------------*/
+.loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 999;
+  color: #fff;
+  text-align: center;
+}
+.loading p {
+  position: relative;
+  top: 50%;
+}
+
+.loading-on {
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-name: ladingAni;
+  -moz-animation-name: ladingAni;
+  animation-name: ladingAni;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-webkit-keyframes ladingAni {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+}
+@-moz-keyframes ladingAni {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+}
+@keyframes ladingAni {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+}
 .mainObject-pts-01 {
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-animation-duration: 4s;
-  -moz-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 3.4s;
+  -moz-animation-duration: 3.4s;
+  animation-duration: 3.4s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -931,7 +1003,7 @@ animates
 }
 @-webkit-keyframes mbj-1 {
   0% {
-    transform: translateY(0) translateX(0) rotate();
+    transform: translateY(0) translateX(0) rotate(0);
   }
   100% {
     transform: translateY(1%) translateX(3%) rotate(1deg);
@@ -939,7 +1011,7 @@ animates
 }
 @-moz-keyframes mbj-1 {
   0% {
-    transform: translateY(0) translateX(0) rotate();
+    transform: translateY(0) translateX(0) rotate(0);
   }
   100% {
     transform: translateY(1%) translateX(3%) rotate(1deg);
@@ -947,7 +1019,7 @@ animates
 }
 @keyframes mbj-1 {
   0% {
-    transform: translateY(0) translateX(0) rotate();
+    transform: translateY(0) translateX(0) rotate(0);
   }
   100% {
     transform: translateY(1%) translateX(3%) rotate(1deg);
@@ -957,9 +1029,9 @@ animates
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-animation-duration: 4s;
-  -moz-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 3.4s;
+  -moz-animation-duration: 3.4s;
+  animation-duration: 3.4s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -978,7 +1050,7 @@ animates
 }
 @-webkit-keyframes mbj-2 {
   0% {
-    transform: translateY(0) translateX(0) rotate();
+    transform: translateY(0) translateX(0) rotate(0);
   }
   100% {
     transform: translateY(3%) translateX(3%) rotate(2deg);
@@ -986,7 +1058,7 @@ animates
 }
 @-moz-keyframes mbj-2 {
   0% {
-    transform: translateY(0) translateX(0) rotate();
+    transform: translateY(0) translateX(0) rotate(0);
   }
   100% {
     transform: translateY(3%) translateX(3%) rotate(2deg);
@@ -994,7 +1066,7 @@ animates
 }
 @keyframes mbj-2 {
   0% {
-    transform: translateY(0) translateX(0) rotate();
+    transform: translateY(0) translateX(0) rotate(0);
   }
   100% {
     transform: translateY(3%) translateX(3%) rotate(2deg);
@@ -1004,9 +1076,9 @@ animates
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-animation-duration: 4s;
-  -moz-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 3.4s;
+  -moz-animation-duration: 3.4s;
+  animation-duration: 3.4s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -1051,9 +1123,9 @@ animates
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-animation-duration: 4s;
-  -moz-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 3.4s;
+  -moz-animation-duration: 3.4s;
+  animation-duration: 3.4s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;

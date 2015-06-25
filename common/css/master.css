@@ -607,24 +607,108 @@ contents
 }
 
 .mainVisual {
-  display: table;
   margin: 0 auto;
-}
-.mainVisual div {
-  display: table-cell;
 }
 
 .mainObject {
+  overflow: hidden;
+}
+.mainObject ul {
   position: relative;
   width: 513px;
-  z-index: 1;
   height: 429px;
+}
+.mainObject ul li {
+  position: absolute;
+}
+@media only screen and (min-width: 481px) and (max-width: 790px) {
+  .mainObject ul {
+    left: -7%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mainObject ul {
+    height: 350px;
+  }
+  .mainObject img {
+    width: 70%;
+  }
+}
+
+.mainObject-pts-01 {
+  z-index: 5;
+  top: 69px;
+  left: 88px;
+}
+@media only screen and (max-width: 480px) {
+  .mainObject-pts-01 {
+    top: 48.3px;
+    left: 61.6px;
+  }
+}
+
+.mainObject-pts-02 {
+  z-index: 4;
+  left: 218px;
+  top: 0;
+}
+@media only screen and (max-width: 480px) {
+  .mainObject-pts-02 {
+    left: 152.6px;
+  }
+}
+
+.mainObject-pts-03 {
+  z-index: 6;
+  top: 115px;
+  left: 246px;
+}
+@media only screen and (max-width: 480px) {
+  .mainObject-pts-03 {
+    top: 80.5px;
+    left: 172.2px;
+  }
+}
+
+.mainObject-pts-04 {
+  z-index: 3;
+  top: 204px;
+  left: 226px;
+}
+@media only screen and (max-width: 480px) {
+  .mainObject-pts-04 {
+    top: 142.8px;
+    left: 158.2px;
+  }
+}
+
+.mainObject-pts-05 {
+  z-index: 2;
+  top: 207px;
+  left: 0;
+}
+@media only screen and (max-width: 480px) {
+  .mainObject-pts-05 {
+    top: 144.9px;
+  }
 }
 
 .subObject {
-  position: relative;
-  top: 50px;
-  vertical-align: bottom;
+  text-align: right;
+  margin: -10% 10% 0 0;
+}
+@media only screen and (min-width: 481px) and (max-width: 790px) {
+  .subObject {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .subObject {
+    margin: 0;
+  }
+  .subObject img {
+    width: 50%;
+  }
 }
 
 .lead {
@@ -822,41 +906,7 @@ Texts
 /*-------------------------------------
 animates
 -------------------------------------*/
-.mainObject-01, .mainObject-02, .mainObject-03, .mainObject-04, .mainObject-05 {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.mainObject-01 {
-  z-index: 5;
-  top: 69px;
-  left: 88px;
-}
-
-.mainObject-02 {
-  z-index: 4;
-  left: 218px;
-}
-
-.mainObject-03 {
-  z-index: 6;
-  top: 115px;
-  left: 246px;
-}
-
-.mainObject-04 {
-  z-index: 3;
-  top: 204px;
-  left: 226px;
-}
-
-.mainObject-05 {
-  z-index: 2;
-  top: 207px;
-}
-
-.mainObject-01 {
+.mainObject-pts-01 {
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -903,7 +953,7 @@ animates
     transform: translateY(1%) translateX(3%) rotate(1deg);
   }
 }
-.mainObject-02 {
+.mainObject-pts-02 {
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -950,7 +1000,7 @@ animates
     transform: translateY(3%) translateX(3%) rotate(2deg);
   }
 }
-.mainObject-03 {
+.mainObject-pts-03 {
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -997,7 +1047,7 @@ animates
     transform: rotate(-3deg);
   }
 }
-.mainObject-04 {
+.mainObject-pts-04 {
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);

@@ -489,15 +489,18 @@ header:after {
   display: table;
   clear: both;
 }
+@media only screen and (max-width: 480px) {
+  header {
+    margin-bottom: 50px;
+  }
+}
 
 .logo {
   float: left;
   text-align: center;
 }
-@media only screen and (min-width: 1280px) {
-  .logo {
-    margin-right: -131px;
-  }
+.logo img {
+  width: 100px;
 }
 @media only screen and (min-width: 481px) and (max-width: 790px) {
   .logo {
@@ -512,7 +515,7 @@ header:after {
 
 .g-nav {
   overflow: hidden;
-  margin: 23px auto 13px;
+  margin: 13px auto;
   max-width: 980px;
   text-align: center;
   letter-spacing: -5px;
@@ -601,9 +604,15 @@ contents
   padding: 0 20px;
   max-width: 980px;
 }
+@media only screen and (max-width: 480px) {
+  .contents {
+    margin: 0 auto 50px;
+  }
+}
 
 .mainLogo {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .mainVisual {
@@ -613,23 +622,26 @@ contents
 .mainObject {
   overflow: hidden;
 }
-@media only screen and (min-width: 481px) and (max-width: 790px) {
-  .mainObject ul {
-    left: -7%;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .mainObject ul {
-    height: 350px;
-  }
-  .mainObject img {
-    width: 70%;
-  }
-}
 .mainObject ul {
   position: relative;
   width: 513px;
   height: 429px;
+}
+@media only screen and (min-width: 481px) and (max-width: 790px) {
+  .mainObject ul {
+    height: 310px;
+  }
+  .mainObject ul img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mainObject ul {
+    height: 210px;
+  }
+  .mainObject ul img {
+    width: 50%;
+  }
 }
 .mainObject ul li {
   position: absolute;
@@ -640,10 +652,16 @@ contents
   left: 88px;
   z-index: 5;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 481px) and (max-width: 790px) {
   .mainObject-pts-01 {
     top: 48.3px;
     left: 61.6px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mainObject-pts-01 {
+    top: 34.5px;
+    left: 44px;
   }
 }
 
@@ -652,9 +670,14 @@ contents
   left: 218px;
   z-index: 4;
 }
+@media only screen and (min-width: 481px) and (max-width: 790px) {
+  .mainObject-pts-02 {
+    left: 149.8px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .mainObject-pts-02 {
-    left: 152.6px;
+    left: 109px;
   }
 }
 
@@ -663,10 +686,16 @@ contents
   left: 246px;
   z-index: 6;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 481px) and (max-width: 790px) {
   .mainObject-pts-03 {
     top: 77.5px;
-    left: 173.3px;
+    left: 172.2px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mainObject-pts-03 {
+    top: 52.5px;
+    left: 123px;
   }
 }
 
@@ -675,10 +704,16 @@ contents
   left: 226px;
   z-index: 3;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 481px) and (max-width: 790px) {
   .mainObject-pts-04 {
     top: 142.8px;
     left: 158.2px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mainObject-pts-04 {
+    top: 102px;
+    left: 113px;
   }
 }
 
@@ -687,9 +722,14 @@ contents
   left: 0;
   z-index: 2;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 481px) and (max-width: 790px) {
   .mainObject-pts-05 {
     top: 144.9px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mainObject-pts-05 {
+    top: 100.5px;
   }
 }
 
@@ -699,7 +739,11 @@ contents
 }
 @media only screen and (min-width: 481px) and (max-width: 790px) {
   .subObject {
-    margin: 0;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .subObject img {
+    width: 180px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -707,7 +751,7 @@ contents
     margin: 0;
   }
   .subObject img {
-    width: 50%;
+    width: 130px;
   }
 }
 
@@ -765,9 +809,20 @@ headings
 -------------------------------------*/
 .hdg-l1 {
   margin-bottom: 62px;
+  position: relative;
 }
-.hdg-l1 img {
-  margin-right: 10px;
+
+.moku .hdg-l1 {
+  margin-left: 50px;
+}
+.moku .hdg-l1:before {
+  content: "";
+  display: block;
+  background: url(/cubivore/moku/images/hdg-skin.png) no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -50px;
 }
 
 /*-------------------------------------
@@ -904,87 +959,15 @@ Texts
 }
 
 /*-------------------------------------
-animates
+Animations
 -------------------------------------*/
-.loading {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  z-index: 999;
-  color: #fff;
-  text-align: center;
-}
-.loading p {
-  position: relative;
-  top: 50%;
-}
-
-.loading-on {
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-animation-duration: 0.5s;
-  -moz-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  -webkit-animation-iteration-count: 1;
-  -moz-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-name: ladingAni;
-  -moz-animation-name: ladingAni;
-  animation-name: ladingAni;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-direction: alternate;
-  -moz-animation-direction: alternate;
-  animation-direction: alternate;
-}
-@-webkit-keyframes ladingAni {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-30%);
-    opacity: 0;
-  }
-}
-@-moz-keyframes ladingAni {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-30%);
-    opacity: 0;
-  }
-}
-@keyframes ladingAni {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-30%);
-    opacity: 0;
-  }
-}
 .mainObject-pts-01 {
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-animation-duration: 3.4s;
-  -moz-animation-duration: 3.4s;
-  animation-duration: 3.4s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -1029,9 +1012,9 @@ animates
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-animation-duration: 3.4s;
-  -moz-animation-duration: 3.4s;
-  animation-duration: 3.4s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -1076,9 +1059,9 @@ animates
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-animation-duration: 3.4s;
-  -moz-animation-duration: 3.4s;
-  animation-duration: 3.4s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -1123,9 +1106,9 @@ animates
   -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-animation-duration: 3.4s;
-  -moz-animation-duration: 3.4s;
-  animation-duration: 3.4s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -1191,6 +1174,96 @@ animates
   }
   100% {
     transform: translateY(-12%) rotate(-4deg);
+  }
+}
+/*-------------------------------------
+Loadings
+-------------------------------------*/
+.js-off .loading {
+  display: none;
+}
+
+.loading {
+  position: fixed;
+  background: #000;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+}
+
+.loading-body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 287px;
+  height: 298px;
+  text-align: center;
+}
+
+.load-text {
+  margin-top: 30px;
+}
+.load-text img {
+  width: 176px;
+}
+
+.loading-on {
+  -webkit-animation-timing-function: ease-in-out-quint;
+  -moz-animation-timing-function: ease-in-out-quint;
+  animation-timing-function: ease-in-out-quint;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-name: loadingAni;
+  -moz-animation-name: loadingAni;
+  animation-name: loadingAni;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-webkit-keyframes loadingAni {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-moz-keyframes loadingAni {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes loadingAni {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40%);
+    opacity: 0;
+    visibility: hidden;
   }
 }
 /*-------------------------------------

@@ -409,6 +409,16 @@ th {
   clear: both;
 }
 
+.header-menu-btn, .header-menu-btn:before, .header-menu-btn:after {
+  position: absolute;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+.header-menu-on .header-menu-btn, .header-menu-on .header-menu-btn:before, .header-menu-on .header-menu-btn:after {
+  border-color: #ccc;
+}
+
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -482,6 +492,7 @@ header {
   margin-bottom: 80px;
   padding: 10px;
   background-color: rgba(69, 66, 66, 0.8);
+  position: relative;
   *zoom: 1;
 }
 header:after {
@@ -510,6 +521,12 @@ header:after {
 @media only screen and (max-width: 480px) {
   .logo {
     float: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .js-off .g-nav {
+    display: block;
   }
 }
 
@@ -578,6 +595,10 @@ header:after {
   }
 }
 
+.g-nav-on {
+  display: block;
+}
+
 .g-moku {
   width: 15.4%;
 }
@@ -594,6 +615,40 @@ header:after {
 
 .g-world {
   width: 27.1%;
+}
+
+.header-menu {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  .header-menu {
+    border-radius: 3px;
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 21.5px;
+    width: 35px;
+    cursor: pointer;
+  }
+}
+
+.header-menu-btn {
+  width: 23px;
+  left: 6px;
+  top: 14px;
+}
+.header-menu-btn:before {
+  content: "";
+  width: 21px;
+  left: -1px;
+  top: -9px;
+}
+.header-menu-btn:after {
+  content: "";
+  width: 21px;
+  left: -1px;
+  top: 7px;
 }
 
 /*-------------------------------------
@@ -712,7 +767,7 @@ contents
 }
 @media only screen and (max-width: 480px) {
   .mainObject-pts-04 {
-    top: 102px;
+    top: 100px;
     left: 113px;
   }
 }
@@ -768,6 +823,7 @@ footer
 -------------------------------------*/
 footer {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0 20px;
   font-size: 14px;
   font-size: 1.4rem;
 }
@@ -834,8 +890,12 @@ Links
   text-align: right;
   padding-right: 10px;
 }
+.pageTop .kero {
+  width: 50px;
+}
 .pageTop img {
   margin-left: 10px;
+  width: 87px;
 }
 .pageTop a:hover {
   opacity: 0.5;
@@ -1203,9 +1263,15 @@ Loadings
   text-align: center;
 }
 
-.load-text {
-  margin-top: 30px;
+.load-Chara {
+  margin-bottom: 30px;
 }
+@media only screen and (max-width: 480px) {
+  .load-Chara img {
+    width: 144px;
+  }
+}
+
 .load-text img {
   width: 176px;
 }

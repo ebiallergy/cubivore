@@ -665,7 +665,7 @@ contents
   }
 }
 .contents section {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .contents section > :last-child {
   margin-bottom: 0;
@@ -869,6 +869,11 @@ headings
   position: relative;
   margin: 0 0 62px 50px;
 }
+@media only screen and (max-width: 480px) {
+  .hdg-l1 {
+    margin-bottom: 30px;
+  }
+}
 
 .moku .hdg-l1:before {
   content: "";
@@ -902,6 +907,11 @@ headings
 
 .hdg-l2 {
   margin-bottom: 3rem;
+}
+@media only screen and (max-width: 480px) {
+  .hdg-l2 {
+    margin-bottom: 2rem;
+  }
 }
 
 .hdg-l3 {
@@ -1444,7 +1454,7 @@ Common
 }
 
 .w-366 {
-  width: 366px;
+  max-width: 366px;
 }
 
 .mr-13 {

@@ -1,13 +1,13 @@
-$(function(){
+$(function () {
     //js-on
     $('body').removeClass('js-off');
-    
+
     //header-menu
     var gNavi = $('.g-nav'),
         naviMenu = $('.header-menu');
-    
-    naviMenu.on('click', function(){
-        if($(this).hasClass('header-menu-on')){
+
+    naviMenu.on('click', function () {
+        if ($(this).hasClass('header-menu-on')) {
             $(this).removeClass('header-menu-on');
             $(gNavi).removeClass('g-nav-on');
         } else {
@@ -15,16 +15,25 @@ $(function(){
             $(gNavi).addClass('g-nav-on');
         }
     });
-    
+
     //pageTop
-    $('.pageTop').on('click',function(e){
+    $('.pageTop').on('click', function (e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop : 0},600, 'swing');
+        $('html, body').animate({ scrollTop: 0 }, 600, 'swing');
     });
 });
 
-window.onload = function(){
-    $(function() {
+window.onload = function () {
+    $(function () {
         $('.loading').addClass('loading-on');
     });
 }
+
+$('a').on('click', function () {
+    var title = 'ebiallergy.github.io',
+        lbl = $(this).data('title') || $(this).attr('title') || $(this).attr('href');
+
+    if (lbl) {
+        eventTrack(title, lbl);
+    }
+});
